@@ -24,15 +24,4 @@ Following are the results for June and December:
 
 ## Summary
 
-In conclusion of our analysis, we have included two queries to help the investor to make decision whether to open the surf shop in Oahu. 
-
-#### Number of stations from which the precipitation data is being collected  
-```
-session.query(func.count(Station.station)).all()
-```
-
-#### Query that retrieves precipitation scores
-```
-dec_prep =  session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6 ).all()
-print(dec_prep)
-```
+In conclusion of our analysis, we could include two additional queries to help the investor to make decision in opening the surf shop in Oahu, Hawaii. I would run the query to gather more weather data about rainfall levels for different months to compare summer and winter rainfall. Rainfall levels will affect surfing, ice cream consumption and business operations. Another query I would run would be an extreme weather indicator to note when hurricanes, cyclones, tsunamis and other extreme weather events are more likely to appear during the summer or winter months. This will be useful for disaster safety planning.
